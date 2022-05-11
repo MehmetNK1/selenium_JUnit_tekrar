@@ -25,7 +25,7 @@ public class C01 {
 
         WebElement currentAddress = driver.findElement(By.id("currentAddress"));
         currentAddress.click();
-        currentAddress.sendKeys("leipziger str 123");
+        currentAddress.sendKeys("leipziger str 155");
 
         WebElement permanentAddress = driver.findElement(By.id("permanentAddress"));
         permanentAddress.click();
