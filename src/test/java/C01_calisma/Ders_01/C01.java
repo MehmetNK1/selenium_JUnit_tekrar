@@ -1,4 +1,4 @@
-package C01_calisma;
+package C01_calisma.Ders_01;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
