@@ -51,6 +51,11 @@ public class ebru_ho {
 
         //10- urun ucretinin 25$ oldugunu test et
 
+        WebElement ucret = driver.findElement(By.xpath("//*[@id='a-autoid-28']"));
+        if (ucret.isSelected()){
+            System.out.println("10- PASSED");
+        }else System.out.println("10- FAILLED");
+
 
 
 
