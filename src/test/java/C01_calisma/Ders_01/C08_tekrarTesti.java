@@ -55,16 +55,16 @@ public class C08_tekrarTesti {
         driver.manage().window().maximize();
 
         Thread.sleep(2000);
-        //9-
+        //9-title "Amazon" oldugunu CONTAINS ile test ve dogru olani yaz
+        System.out.println(driver.getTitle());
+        String etkinTitles = driver.getTitle();
+        String denemeTitle = "Amazon";
+        if (denemeTitle.contains(etkinTitles)){
+            System.out.println("PASSED");
+        }else {
+            System.out.println("FAILED  -- "+etkinTitles+" =icermiyor");
+        }
 
-
-
-
-
-
-
-
-        Thread.sleep(2000);
         //11- kapat
         driver.close();
     }
