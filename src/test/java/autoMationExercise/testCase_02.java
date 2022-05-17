@@ -23,7 +23,7 @@ public class testCase_02 {
     }
     @After
     public void after() {
-        //driver.close();
+        driver.close();
     }
     @Test
     public void test() {
@@ -60,7 +60,7 @@ public class testCase_02 {
         //6. Enter correct email address and password
         //6. Doğru e-posta adresini ve sifreyi girin
         driver.findElement(By.xpath("//*[@data-qa='login-email']")).sendKeys("tere3333333333333333@gmail.com");
-        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("1234");
+        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("123asd456");
 
 
         //7. Click 'login' button
@@ -70,10 +70,17 @@ public class testCase_02 {
 
         //8. Verify that 'Logged in as username' is visible
         //8. 'Kullanıcı adı olarak oturum açıldı' ifadesinin görünür olduğunu doğrulayın
+        System.out.println(driver.findElement(By.xpath("//*[text()=' Logged in as ']"))
+                .isDisplayed() ? "8- PASSED" : "8- FAILLED");
+
         //9. Click 'Delete Account' button
         //9. 'Hesabı Sil' düğmesini tıklayın
+        driver.findElement(By.xpath("//a[@href='/delete_account']")).click();
+
         //10. Verify that 'ACCOUNT DELETED!' is visible
         //10. 'HESAP SİLİNDİ!' görünür
+        System.out.println(driver.findElement(By.xpath("//a[@href='/delete_account']"))
+                .isDisplayed() ? "10- PASSED" : "10- FAILLED");
 
     }
 }

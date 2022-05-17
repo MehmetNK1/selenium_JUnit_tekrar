@@ -1,9 +1,7 @@
 package pfd_ders_notlari.Ders_03;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,9 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C22_BestBuyAssertions_95 {
-    WebDriver driver;
-    @Before
-    public void before() {
+    static WebDriver driver;
+    @BeforeClass
+    public static void before() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -21,8 +19,8 @@ public class C22_BestBuyAssertions_95 {
         //1- "https://www.bestbuy.com/" adresine git farkli test methodlari ile calis
         driver.get("https://www.bestbuy.com/");
     }
-    @After
-    public void after() {
+    @AfterClass
+    public static void after() {
         driver.close();
     }
     @Test
