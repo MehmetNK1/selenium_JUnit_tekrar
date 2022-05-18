@@ -45,6 +45,11 @@ public class C16_tekrarTesti_81 {
 
         //7- sonuc sayisinin 10 milyondan fazla oldugunu test et //*[text()='Yaklaşık 238.000.000 sonuç bulundu']
 
+        //if (driver.findElement(By.xpath("//*[text()='Sauce Labs Backpack']")).isDisplayed())
+        //              System.out.println("The produtc is in the cart");
+        //           else System.out.println("The produtc is not in cart FAILED");
+        //       // WebElement cartEklendiMi = driver.findElement(By.className("shopping_cart_badge"));
+        //       // Assert.assertTrue("basariyla ekledik",cartEklendiMi.isDisplayed());
 
         //8- kapat
     }
