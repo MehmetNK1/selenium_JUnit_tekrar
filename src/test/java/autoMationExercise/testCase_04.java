@@ -59,17 +59,23 @@ public class testCase_04 {
         Assert.assertTrue(driver.findElement(By.xpath("(//h2)[1]")).getText().contains("Login to your account"));
 
         //        6. Doğru e-posta adresini ve şifreyi girin
-        driver.findElement(By.xpath("(//*[@type='email'])[1]")).sendKeys("tere3333333333333333@gmail.com"+ Keys.ENTER);
-        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("123asd456"+Keys.ENTER);
+        driver.findElement(By.xpath("(//*[@type='email'])[1]")).sendKeys("tere3333333333333333@gmail.com");
+        driver.findElement(By.xpath("//*[@name='password']")).sendKeys("123asd456");
 
         //        7. 'Giriş' düğmesini tıklayın
         driver.findElement(By.xpath("//*[@data-qa='login-button']")).click();
 
         //        8. 'Kullanıcı adı olarak oturum açıldı' ifadesinin görünür olduğunu doğrulayın
-
+        System.out.println(driver.findElement(By.xpath("//*[text()=' Logged in as ']"))
+                .isDisplayed() ? "8- passed" : "8- failled");
+        Assert.assertFalse(driver.findElement(By.xpath("//*[text()=' Logged in as ']"))
+                .getText().contains("Logged in as username"));
 
         //        9. 'Çıkış' düğmesini tıklayın
+        driver.findElement(By.xpath("//*[text()=' Logout']")).click();
+
         //        10. Kullanıcının oturum açma sayfasına yönlendirildiğini doğrulayın
+        //driver.findElement(By.xpath("//*[text()='New User Signup!']")).
 
 
 
