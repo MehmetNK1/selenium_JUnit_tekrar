@@ -24,4 +24,5 @@ public class testCase_08 {
     9. Ayrıntıların görünür olduğunu doğrulayın: ürün adı, kategori, fiyat, bulunabilirlik, durum, marka
 
      */
+
 }
