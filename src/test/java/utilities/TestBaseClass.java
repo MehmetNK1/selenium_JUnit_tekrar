@@ -8,7 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 public abstract class TestBaseClass {
+
     protected static WebDriver driver;
+
     @BeforeClass
     public static void before(){
         WebDriverManager.chromedriver().setup();
