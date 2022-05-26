@@ -25,6 +25,7 @@ public class C32_handleWindows {
     @AfterClass
     public static void after() {
         driver.quit();
+
     }
     @Test
     public void test() {

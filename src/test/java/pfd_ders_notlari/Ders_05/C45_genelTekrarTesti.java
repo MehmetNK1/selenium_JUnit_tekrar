@@ -1,8 +1,10 @@
 package pfd_ders_notlari.Ders_05;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import utilities.TestBaseClass;
@@ -31,23 +33,32 @@ public class C45_genelTekrarTesti extends TestBaseClass {
         //3 drop down menude 40 eleman olduğunu doğrulayın
         int dropSayisi= dropMenu.size();
         if (dropSayisi==40){
-            System.out.println("3- true");
+            System.out.println("1-3- true");
         }else{
-            System.out.println("3- false");
+            System.out.println("1-3- false");
         }
-    }
-    @Test
-    public void Test02() {
         //Test02
         //1 dropdown menuden elektronik bölümü seç in
 
+        //WebElement aramaDropDown2 = driver.findElement(By.xpath("//*[@aria-describedby='searchDropdownDescription']"));
+        //Select select = new Select(aramaDropDown);
+
+        select.selectByVisibleText("Electronics");
 
         //2 arama kutusuna iphone yazip aratin ve bulunan sonuç sayısını yazdırı n
-        //3 sonuc sayisi bildiren yazinin iphone icerdigini test edin
-        //4 ikinci ürüne relative locater kullanarak tıklay in
-        //5 ürünün title'ni ve fiyatını variable’a assign edip ürünü sepete ekleyelim
+        driver.findElement(By.xpath("//*[@type='text']")).sendKeys("iphone"+ Keys.ENTER);
 
+        System.out.println("2-1- : "+driver.findElement(By.xpath("//*[text()='1-12 of 740 results for']")).getText());
+
+        //3 sonuc sayisi bildiren yazinin iphone icerdigini test edin
+        Assert.assertTrue(driver.findElement(By.xpath("(//*[@class='a-section a-spacing-small a-spacing-top-small'])[1]"))
+                .getText().contains("iphone"));
+
+        //4 ikinci ürüne relative locater kullanarak tıklay in
+
+        //5 ürünün title'ni ve fiyatını variable’a assign edip ürünü sepete ekleyelim
     }
+
 
 
 
